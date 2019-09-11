@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function () {
             text: null
         },
         data: {
-            googleSpreadsheetKey: '1YOKb5l2VM4aAB2r20N_1aT_1vEajYrP3U-U3A6lZbC0'
+            googleSpreadsheetKey: '15_RL_xeDNzSNuL6h6OFSWpQweWc_mVHlKyoTX23Cr_M'
         },
         // for bar charts only
         plotOptions: {
@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', function () {
         xAxis: {
             labels: {
                 style: {
-                    whiteSpace: 'nowrap'
+                    // whiteSpace: 'nowrap'
                 }
             },
             tickLength: 5
@@ -77,14 +77,17 @@ document.addEventListener('DOMContentLoaded', function () {
             labels: {
                 useHTML: true,
                 overflow: 'allow'
-            }
+            },
+            max: 60,
+            tickAmount: 5
         },
         credits: {
             enabled: false
         },
         tooltip: {
             shadow: false,
-            padding: 10
+            padding: 10,
+            shared: true
         },
         responsive: {
             rules: [{
@@ -97,7 +100,8 @@ document.addEventListener('DOMContentLoaded', function () {
                 },
                 legend: {
                     align: 'left',
-                    x: -18
+                    x: -18,
+                    itemDistance: 8
                 },
                 tooltip: {
                     enabled: false
